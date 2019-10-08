@@ -3,7 +3,7 @@
 module.exports = {
 
   development: {
-     // client - database briver
+     // client - database driver
     client: 'sqlite3',
     connection: {
       filename: '../data/car-dealer.db3' // << may have to change this
