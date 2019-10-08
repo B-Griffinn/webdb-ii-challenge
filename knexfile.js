@@ -6,7 +6,7 @@ module.exports = {
      // client - database driver
     client: 'sqlite3',
     connection: {
-      filename: '../data/car-dealer.db3' // << may have to change this
+      filename: './data/cars.db3' // << creates a db3 file for me
     },
     useNullAsDefault: true,
   },
