@@ -1,13 +1,14 @@
-
+// This grows our BataBase
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('cars').truncate()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      return knex('cars').insert([
+        {vin: 12365487254632541, make: 'Honda', model: 'Accord', mileage: '', transmission: 'Auto', status: 'Clean'},
+        {vin: 12365487254632541, make: 'Chevy', model: 'Silverado', mileage: '', transmission: 'Auto', status: 'Clean'},
+        {vin: 12365487254632541, make: 'Ford', model: 'Raptor', mileage: '', transmission: 'Manual', status: 'Clean'},
+        {vin: 12365487254632541, make: 'Tesla', model: 'Model S', mileage: '', transmission: 'Manual', status: 'Clean'},
       ]);
     });
 };

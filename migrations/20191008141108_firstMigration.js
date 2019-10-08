@@ -6,11 +6,11 @@ knex.schema.createTable('users', function (table) {
 })
  */
 exports.up = function(knex) {
-  knex.schema.createTable('cars', function(tbl) {  
+  return knex.schema.createTable('cars', function(tbl) {  
     tbl.increments();
 
-    tbl.integer('vin', 17);
-    notNullable();
+    tbl.integer('vin', 17)
+    .notNullable();
 
     tbl.string('make', 128)
     .notNullable();
@@ -30,5 +30,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  
+  return knex.schema.droptableIfExists('cars');
 };
